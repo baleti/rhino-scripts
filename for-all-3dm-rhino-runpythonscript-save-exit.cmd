@@ -1,0 +1,1 @@
+for %i in (*.3dm) do "C:\Program Files\Rhino 8 WIP\System\Rhino.exe" /nosplash /runscript="-RunPythonScript (.\TagObjects.py) save exit" "%i"

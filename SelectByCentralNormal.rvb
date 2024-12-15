@@ -1,0 +1,29 @@
+-runscript (
+sub SelectByCentralNormal
+
+Dim arrObjects, strObject
+objs = Rhino.AllObjects
+If IsArray(objs) Then
+Rhino.UnselectAllObjects()
+For Each obj In objs
+
+
+' SURFACE CASE
+if Rhino.IsSurface(obj) then
+surf = obj
+UV = Rhino.SurfaceParameter (surf , Array(0.5,0.5))
+normal = Rhino.SurfaceNormal (surf , UV)
+cameraLocs = Rhino.ViewCameraTarget()
+vector = Rhino.VectorCreate(cameraLocs(1),cameraLocs(0))
+angle = Rhino.VectorAngle(vector,normal)
+if angle>90 then
+Rhino.SelectObject(surf)
+End If
+End If
+
+
+Next
+Rhino.ZoomSelected()
+End If
+End sub
+SelectByCentralNormal
