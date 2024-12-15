@@ -1,0 +1,53 @@
+Option Explicit
+'Script written by willemderks.com
+'Script version Tuesday, April 1, 2014 09:47:27
+
+Call AllObjectsToIndividualLayers()
+Sub  AllObjectsToIndividualLayers()
+	
+	Dim arrObj : arrObj = Rhino.NormalObjects()
+	If isNull(arrObj) Then Exit Sub
+	
+	Dim digits :digits = Int(len(Cstr(Ubound(arrObj)))) + 1
+	
+	
+	If  Rhino.MessageBox("Distributing " & Ubound(arrObj) + 1 & " Objects To New layers." & Chr(13) & "Do you want to proceed?", 4 + 48, "Objects to Layers") = 6 Then
+		
+		Dim i,N,str
+		N = 1
+		For i=0 To Ubound(arrObj)
+			
+				
+			
+			
+			Do 
+				str = "OBJ_" & PadDigits(N, digits)
+				If Not Rhino.IsLayer(str) Then Exit Do
+				N = N + 1
+				
+			Loop
+			
+			
+			Call Rhino.AddLayer(str, RGB(Rnd * 255, Rnd * 255, Rnd * 255), True, False)
+			Call Rhino.ObjectLayer(arrObj(i), str)
+			
+		Next
+		
+		
+		
+		
+		
+		
+	End If
+	
+	
+	
+
+End Sub
+
+
+
+Function PadDigits(val, digits)
+	'thanks to Dale Fugier
+	PadDigits = Right(String(digits, "0") & val, digits)
+End Function

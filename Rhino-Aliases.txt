@@ -1,0 +1,162 @@
+﻿Z '_Zoom
+ZE '_Zoom _Extents
+ZEA '_Zoom _All _Extents
+ZS '_Zoom _Selected
+ZSA '_Zoom _All _Selected
+S '_Snap
+O '_Ortho
+P '_Planar
+M ! _Move
+U _Undo
+POn ! _PointsOn
+POff ! _PointsOff
+C '_SelCrossing
+W '_SelWindow
+COn '_CurvatureGraph
+COff '_CurvatureGraphOff
+PlugInManager ! _OptionsPage _PlugIns
+AdvancedDisplay ! _OptionsPage _DisplayModes
+DisplayAttrsMgr ! _OptionsPage _DisplayModes
+Break ! _DeleteSubCrv
+SelPolysurface '_SelPolysrf
+seoltSelEntireObjLayerTree -RunPythonScript "Z:\scripts\rhino\SelEntireObjLayerTree.py"
+solSelObjectsLayer -RunPythonScript "Z:\scripts\rhino\SelObjectsLayer-1.py"
+ConvertPlanarSrfsToHatch -RunPythonScript "Z:\scripts\rhino\ConvertPlanarSrfsToHatch-v8.py"
+ChangeLayerInBlockRecursively -RunPythonScript "Z:\scripts\rhino\ChangeLayerInBlockRecursively.py"
+ShowLayerInLayoutDetails -RunPythonScript "Z:\scripts\rhino\ShowLayerInLayoutDetails.py"
+HideLayerInLayoutDetails -RunPythonScript "Z:\scripts\rhino\HideLayerInLayoutDetails.py"
+nvstNamedViewSaveTemp -NamedView Save temp _Enter
+nvrtNamedViewRestoreTemp -NamedView Restore temp _Enter LockViewport
+SelLayerTree -RunPythonScript "Z:\scripts\rhino\SelLayerTree.py"
+GetLayers -RunPythonScript "Z:\scripts\rhino\GetLayers.py"
+xfpXrefFilePaths -RunPythonScript "Z:\scripts\rhino\XrefFilePaths.py"
+xfpsXrefFilePathsSet -RunPythonScript "Z:\scripts\rhino\XrefFilePathsSet.py"
+buBlockUpdate -RunPythonScript "Z:\scripts\rhino\BlockUpdate.py" _Pause _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter
+ExportObjectsToSeparateFiles -RunPythonScript "Z:\scripts\rhino\ExportObjectsToSeparateFiles.py"
+OpenBlockWithDefaultApplication -RunPythonScript "Z:\scripts\rhino\OpenBlockWithDefaultApplication.py"
+SearchBlockDefinitions -RunPythonScript "Z:\scripts\rhino\EtoForm_MultipleListBox_PrintAllBlockDefinitionsInDocument.py"
+SearchLayers -RunPythonScript "Z:\scripts\rhino\EtoForm_MultipleListBox_PrintSelectedLayerName.py"
+ResetTransformation -RunPythonScript "Z:\scripts\rhino\ResetTransformation.py"
+NewNoTemplate -New None
+OpenBlockWithRhino8WIP -RunPythonScript "Z:\scripts\rhino\OpenBlockWithRhino8WIP.py"
+GetBlocksOnLayers -RunPythonScript "Z:\scripts\rhino\GetBlocksOnLayers.py"
+ParentLayer -RunPythonScript "Z:\scripts\rhino\ParentLayer.py"
+solt1SelObjLayerTree1 -RunPythonScript "Z:\scripts\rhino\SelObjLayerTree1.py"
+solt2SelObjLayerTree2 -RunPythonScript "Z:\scripts\rhino\SelObjLayerTree2.py"
+RebuildSurfaceBorder -GrasshopperPlayer "Z:\scripts\rhino\RebuildSurfaceBorder-GhPlayer.gh"
+ProximityNetworkCurves -GrasshopperPlayer "Z:\scripts\rhino\ProximityNetworkCurves-GhPlayer.gh"
+svctSetViewCplaneTop -SetView Cplane Top
+xsXrefShow -RunPythonScript "Z:\scripts\rhino\XrefShow.py"
+xhXrefHide -RunPythonScript "Z:\scripts\rhino\XrefHide.py"
+slShowLayers -RunPythonScript "Z:\scripts\rhino\ShowLayers.py"
+hlHideLayers -RunPythonScript "Z:\scripts\rhino\HideLayers.py"
+XrefHideBlocks -RunPythonScript "Z:\scripts\rhino\XrefHideBlocks.py"
+XrefShowBlocks -RunPythonScript "Z:\scripts\rhino\XrefShowBlocks.py"
+XrefShowLayersAndBlocks -RunPythonScript "Z:\scripts\rhino\XrefShowLayersAndBlocks.py"
+UpdateAllChangedBlocks -RunPythonScript "Z:\scripts\rhino\UpdateAllChangedBlocks.py" _Pause _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter _Enter
+XrefSel -RunPythonScript "Z:\scripts\rhino\XrefSel.py"
+XrefShowAll -RunPythonScript "Z:\scripts\rhino\XrefShowAll.py"
+PrintAllAsSeparatePages -RunPythonScript "Z:\scripts\rhino\PrintAllAsSeparatePages.py"
+DeleteBlock -RunPythonScript "Z:\scripts\rhino\DeleteBlock.py"
+SelBlockNames -RunPythonScript "Z:\scripts\rhino\SelBlockNames.py"
+SetLayerPrintWidthsToMatchCTB -RunPythonScript "Z:\scripts\rhino\SetLayerPrintWidthsToMatchCTB.py"
+SetLayerPrintWidthsToMatchCTBForFiles -RunPythonScript "Z:\scripts\rhino\SetLayerPrintWidthsToMatchCTBForFiles.py"
+PrintAllAsSeparatePagesMultiprocess -RunPythonScript "Z:\scripts\rhino\PrintAllAsSeparatePagesMultiprocess.py"
+ConvertV8ToV7ForFiles -RunPythonScript "Z:\scripts\rhino\ConvertV8ToV7ForFiles.py"
+xtXrefToggleVisibility -RunPythonScript "Z:\scripts\rhino\XrefToggleVisibility.py"
+ConvertProjectV8ToV7 -RunPythonScript "Z:\scripts\rhino\ConvertProjectV8ToV7.py"
+xmpXrefModifyPath -RunPythonScript "Z:\scripts\rhino\XrefModifyPath.py"
+SelObjectsLayer -RunPythonScript "Z:\scripts\rhino\SelObjectsLayer-1-mine.py"
+ListAllChangedBlocks -RunPythonScript "Z:\scripts\rhino\ListAllChangedBlocks.py"
+XrefChangePathWithoutRenaming -RunPythonScript "Z:\scripts\rhino\XrefChangePathWithoutRenaming.py"
+GetGuidToClipboard -RunPythonScript "Z:\scripts\rhino\GetGuidToClipboard.py"
+FormatTextAreaSquareMeters -RunPythonScript "Z:\scripts\rhino\FormatTextAreaSquareMeters.py"
+lctcLayoutCopyToClipboard -RunPythonScript "Z:\scripts\rhino\LayoutCopyToClipboard.py"
+lafcLayoutAddFromClipboard -RunPythonScript "Z:\scripts\rhino\LayoutAddFromClipboard.py"
+ncgNamedCplaneGUI -RunPythonScript "Z:\scripts\rhino\NamedCplaneGUI.py"
+rcgRemapCplaneGUI -RunPythonScript "Z:\scripts\rhino\RemapCplaneGUI.py"
+ilIsolateLock IsolateLock
+ssShowSelected ShowSelected
+qetsQuickExportToDWG -RunPythonScript "Z:\scripts\rhino\QuickExportToDWG-NewScheme.py"
+nncNewNamedCplane -RunPythonScript "Z:\scripts\rhino\NewNamedCplane.py"
+dncDeleteNamedCplane -RunPythonScript "Z:\scripts\rhino\DeleteNamedCplane.py"
+zzsSetViewCplaneZoomSelected -SetView Cplane Top '_Zoom _Selected
+xiitspXrefInsertInTheSamePlace -RunPythonScript "Z:\scripts\rhino\XrefInsertInTheSamePlace.py"
+xewmbpXrefExportWithModelBasePoint -RunPythonScript "Z:\scripts\rhino\XrefExportWithModelBasePoint.py"
+gbnGetBlocksName -RunPythonScript "Z:\scripts\rhino\GetBlocksName.py"
+gbnsGetBlocksNameSet -RunPythonScript "Z:\scripts\rhino\GetBlocksNameSet.py"
+ndtNewDefaultTemplate -New Default
+ndatNewDefaultA1Template -New Default-A1
+xmutXrefModifyUpdateType -RunPythonScript "Z:\scripts\rhino\XrefModifyUpdateType.py"
+xcctlffXrefConvertCurvesToLinesForFiles -RunPythonScript "Z:\scripts\rhino\XrefConvertCurvesToLinesForFiles.py"
+SaveAsDWGForFiles -RunPythonScript "Z:\scripts\rhino\SaveAsDWGForFiles.py"
+rvRemapView -RunPythonScript "Z:\scripts\rhino\RemapView.py"
+iiIsolate _Isolate
+qsatsQuickSaveAsToDWG -RunPythonScript "Z:\scripts\rhino\QuickSaveAsToDWG.py"
+SetLayerColorsToMatchCTBForFiles -RunPythonScript "Z:\scripts\rhino\SetLayerColorsToMatchCTBForFiles.py"
+XrefExportSeparateAsDWG -RunPythonScript "Z:\scripts\rhino\XrefExportSeparateAsDWG.py"
+jjLayMCur_MakeObjectLayerCurrent -RunPythonScript "Z:\scripts\rhino\jjLayMCur_MakeObjectLayerCurrent.py"
+cbCurveBoolean CurveBoolean
+FormatTextAreaSquareMetersWholeNumbers -RunPythonScript "Z:\scripts\rhino\FormatTextAreaSquareMetersWholeNumbers.py"
+ExportDwgSchemeRGBColors _Export
+ExportDwgSchemeIndexColors -Export Browse Scheme "Default-Copy" _Enter
+beBlockEdit BlockEdit
+ClipSelGUI -RunPythonScript "Z:\scripts\rhino\ClipSelGUI.py"
+ccpChangeCameraProjection -RunPythonScript "Z:\scripts\rhino\ChangeCameraProjection.py"
+ww what
+pococPropertiesObjectColorObjectColorPicker -Properties Object Color Object ColorPicker _Enter _Enter
+pdstPrintDisplayStateToggle -PrintDisplay State Toggle _Enter
+mmMatchMaterial -MatchProperties _Pause _Pause Name=No Layer=No DisplayColor=No DisplayMode=No Linetype=No LinetypeScale=No PrintColor=No PrintWidth=No Clip=No SectionStyle=No Hyperlink=No CustomMesh=No CastsShadows=No ReceivesShadows=No IsocurveDensity=No Material=Yes CurvePiping=No Displacement=No EdgeSoftening=No ShutLining=No Thickening=No TextureMapping=No AttributeUserText=No _Enter
+mpaMatchPropertiesAll -MatchProperties _Pause _Pause MatchAll _Enter
+rcmgRemapCplaneMultipleGUI -RunPythonScript "Z:\scripts\rhino\RemapCplaneMultipleGUI.py"
+esExtractSrf ExtractSrf
+ppPlanarSrf PlanarSrf
+boolDiffBooleanDifference BooleanDifference
+bdBoolenDifference BooleanDifference
+bumacfBooleanUnionMergeAllCoplanarFaces BooleanUnion MergeAllCoplanarFaces
+hhHide Hide
+jmacfJoinMergeAllCoplanarFaces Join MergeAllCoplanarFaces
+poclPropertiesObjectColorLayer -Properties Object Color Layer _Enter _Enter
+xselXrefSel -RunPythonScript "Z:\scripts\rhino\XrefSel.py"
+mv0MoveVertical000 move vertical _Pause 0,0,0
+cisCopyInplaceSellast Copy InPlace SelLast
+r3Rotate3D Rotate3D
+ChangeMaterial -RunPythonScript "Z:\scripts\rhino\ChangeMaterial.py"
+cmChangeMaterial -RunPythonScript "Z:\scripts\rhino\ChangeMaterial.py"
+nvgNamedViewGUI -RunPythonScript "Z:\scripts\rhino\NamedViewGUI.py"
+scibSelColorInBlocks -RunPythonScript "Z:\scripts\rhino\SelColorInBlocks.py"
+smibSelMaterialInBlocks -RunPythonScript "Z:\scripts\rhino\SelMaterialInBlocks.py"
+bsBooleanSplit BooleanSplit
+CurrentLayer -Layer Current List _Enter
+vvLineVertical Line Vertical
+eiExtractIsocurve ExtractIsocurve
+evtiExportViewportsToImages -RunPythonScript "Z:\scripts\rhino\ExportViewportsToImages.py"
+scpivSelClippingPlaneInViewport SelClippingPlaneInViewport
+sltSelLayerTree SelLayerTree
+bcBlendCrv BlendCrv _Pause _Pause _Enter
+vfbVrayShowVFB VrayShowVFB
+vsaeVrayShowAssetEditor vrayShowAssetEditor
+bboxBoundingBox BoundingBox
+ReOpenThisFileWithoutSaving -RunPythonScript "Z:\scripts\rhino\ReOpenThisFileWithoutSaving.py"
+macsMergeAllCoplanarSurfaces MergeAllCoplanarSurfaces
+mlMatchLayer MatchLayer
+ectExtendCameraTarget -RunPythonScript "Z:\scripts\rhino\ExtendCameraTarget.py"
+pbdPullBlocksDown -RunPythonScript "Z:\scripts\rhino\PullBlocksDown.py"
+XrefRemoveDWG -RunPythonScript "Z:\scripts\rhino\XrefRemoveDWG.py"
+sonSetObjectsName -RunPythonScript "Z:\scripts\rhino\SetObjectsName.py"
+scpnSetClippingPlanesName -RunPythonScript "Z:\scripts\rhino\SetClippingPlanesName.py"
+gnGetNames -RunPythonScript "Z:\scripts\rhino\GetNames.py"
+gaonGetAllObjectsNames -RunPythonScript "Z:\scripts\rhino\GetAllObjectsNames.py"
+usUnlockSelected UnlockSelected
+dacpDisableAllClippingPlanes -RunPythonScript "Z:\scripts\rhino\DisableAllClippingPlanes.py"
+pocPropertiesObjectColor -Properties Object Color Object ColorPicker _Enter _Enter
+XrefChangePath -RunPythonScript "Z:\scripts\rhino\XrefChangePath.py"
+mmMaxViewport MaxViewport
+rccgRemapCplaneCopyGUI -RunPythonScript "Z:\scripts\rhino\RemapCplaneCopyGUI.py"
+rvgRemapViewGUI -RunPythonScript "Z:\scripts\rhino\RemapViewGUI.py"
+bbeBlockEdit BlockEdit
+rccgRemapCplaneCopyMultipleGUI -RunPythonScript "Z:\scripts\rhino\RemapCplaneCopyMultipleGUI.py"
+BatchMake2D -RunPythonScript "Z:\scripts\rhino\BatchMake2D.py"
+sovnSetObjectViewportsName -RunPythonScript "Z:\scripts\rhino\SetObjectViewportsName.py"
+atAbsoluteTolerance -RunPythonScript "Z:\scripts\rhino\AbsoluteTolerance.py"
+gavpGetActiveViewportParameters -RunPythonScript "Z:\scripts\rhino\GetActiveViewportParameters.py"

@@ -1,0 +1,120 @@
+Option Explicit
+'Script written by willemderks.com
+'Script version Tuesday, April 12, 2014 
+
+Call AllGroupsObjectsToIndividualLayers()
+Sub  AllGroupsObjectsToIndividualLayers()
+	
+	Dim arrObj : arrObj = Rhino.GetObjects("Get Objects to distribute to layers")
+	If isNull(arrObj) Then Exit Sub
+	
+	Dim i	
+	Dim digits :digits = Int(len(Cstr(Ubound(arrObj)))) + 1
+	Dim tmp	
+	Dim arrGroups
+	ReDim arrGroups(Ubound(arrObj))
+	For i=0 To Ubound(arrObj)
+		arrGroups(i) = Rhino.ObjectGroups(arrObj(i))
+		If Not isNull(arrGroups(i)) Then 
+			tmp = arrGroups(i)(0)
+			arrGroups(i) = tmp
+		Else
+			arrGroups(i) = Null
+		End If
+	Next
+	
+	Call ArrayCullNull(arrGroups)
+	
+	Dim arrObjGrouped : arrObjGrouped = array()
+	
+	Dim g,arrG	
+	If  Ubound(arrGroups) > -1 Then 
+		arrGroups = Rhino.CullDuplicateStrings(arrGroups)
+		
+		
+		arrObjGrouped = Rhino.MakeArray(Ubound(arrGroups), array())
+		
+		For g=0 To Ubound(arrGroups)
+			For i=0 To Ubound(arrObj)
+				If Not isNull(arrObj(i)) Then
+					arrG = Rhino.ObjectGroups(arrObj(i))
+					If Not isNull(arrG) Then 
+						If arrGroups(g) = arrG(0) Then 
+							arrObjGrouped(g) = Rhino.JoinArrays(arrObjGrouped(g), array(arrObj(i)))
+							arrObj(i) = Null
+						End If
+					End If
+				End If
+			Next
+		Next
+	End If
+	
+
+	Call ArrayCullNull(arrObj)
+	If Ubound(arrObj) > -1 Then 
+		For i=0 To Ubound(arrObj)
+			tmp = array(arrObj(i))
+			arrObj(i) = tmp
+		Next
+	End If
+	
+	Dim arrToDistribute
+	arrToDistribute = Rhino.JoinArrays(arrObjGrouped, arrObj)
+	
+	
+	If  Rhino.MessageBox("Distributing " & Ubound(arrToDistribute) + 1 & " Objects and/or Groups To New layers." & Chr(13) & "Do you want to proceed?", 4 + 48, "Objects and Groups to Layers") = 6 Then
+		
+		Dim N,str
+		N = 1
+		For i=0 To Ubound(arrToDistribute)
+			
+				
+			
+			
+			Do 
+				str = "OBJ_" & PadDigits(N, digits)
+				If Not Rhino.IsLayer(str) Then Exit Do
+				N = N + 1
+				
+			Loop
+			
+						
+			Call Rhino.AddLayer(str, RGB(Rnd * 255, Rnd * 255, Rnd * 255), True, False)
+			Call Rhino.ObjectLayer(arrToDistribute(i), str)
+			
+		Next
+		
+		
+		
+		
+		
+		
+	End If
+	
+	
+	
+
+End Sub
+
+Function  ArrayCullNull(ByRef arr)
+	'Purges all array items that are Null
+	'Returns a newly dimensioned array
+	'when all items are purges the array returned is an emoty array with Ubound = -1
+	Dim i, j
+	If IsArray(arr) Then
+		i = 0 : j = -1
+		For i = 0 To UBound(arr)
+			If Not isNull(arr(i))Then
+				j = j + 1
+				arr(j) = arr(i)
+			End If
+		Next
+		ReDim Preserve arr(j)
+	End If
+End Function
+	
+
+Function PadDigits(val, digits)
+	'thanks to Dale Fugier
+	PadDigits = Right(String(digits, "0") & val, digits)
+End Function
